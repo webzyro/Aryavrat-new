@@ -1,0 +1,246 @@
+/* General Styles */
+:root {
+  --primary-text-color: #212529;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+h2 {
+  color: green !important;
+}
+
+/* header */
+#header {
+  background-color: green;
+}
+
+/* Navbar Styles */
+.navbar .nav-link {
+  color: #4b5563;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #f97316;
+}
+
+/* Breadcrumbs */
+#breadcrumb {
+  background-color: green;
+}
+
+/* Stat Section */
+#stats-section {
+  background-color: green;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url("./assets/Images/hero.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+}
+
+.hero-content {
+  padding: 80px 0;
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  color: #4b5563;
+  font-weight: bold;
+}
+
+/* Service Cards */
+.service-card {
+  transition: transform 0.3s ease-out;
+  border: 2px solid green;
+  height: 400px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Benefits Section */
+.benefit-card {
+  border: none;
+}
+
+.benefit-icon {
+  transition: transform 0.7s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.25);
+}
+
+/* Why Section */
+.why-card {
+  background-color: white;
+  box-shadow: 5px 5px green !important;
+  border: 1px solid green;
+}
+
+/* Gallery */
+.gallery-img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-orange {
+  background-color: #f97316;
+  color: white !important;
+  font-weight: bold;
+}
+
+.btn-orange:hover {
+  background-color: #ea580c;
+  color: white;
+}
+
+/* FAQ Accordion */
+/* .accordion-button:not(.collapsed) {
+  background-color: #f97316;
+  color: white;
+} */
+
+.accordion-button {
+  background-color: #f97316 !important;
+  color: white !important;
+}
+
+.accordion-body {
+  background-color: #f97316 !important;
+  color: white !important;
+}
+
+.accordion-button {
+  background-color: #cad5e2;
+  color: var(--primary-text-color);
+  font-weight: bold;
+}
+
+/* Testimonial Section */
+#testimonial-container .testimonial-img {
+  top: -50px;
+  left: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+#testimonial-container .card-body {
+  margin-top: 90px;
+}
+
+#testimonial-container .card-body i {
+  color: #f97316;
+}
+
+/* Contact Section */
+.contact-section {
+  border: 2px solid grey;
+}
+
+.contact-section form input,
+textarea,
+select {
+  border: 2px solid grey !important;
+  outline: none !important;
+  border-radius: 10px !important;
+}
+
+.contact-section form input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+}
+
+.contact-section form input::placeholder,
+textarea::placeholder {
+  color: grey !important;
+  font-size: 1.2rem;
+}
+
+.contact-section form select {
+  color: grey !important;
+  font-size: 1.2rem;
+}
+
+.contact-section button {
+  width: 100%;
+}
+
+.contact-section #contact-section-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Contact page */
+.contact-card {
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.form-control {
+  padding: 0.75rem;
+}
+
+.form-control:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 0.25rem rgba(249, 115, 22, 0.25);
+}
+
+/* Team Card */
+#team-card {
+  box-shadow: 2px 2px green;
+  border: 1px solid green;
+}
+
+/* Counter Animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.counter {
+  animation: countUp 1s ease-out;
+}
