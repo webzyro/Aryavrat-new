@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
 /* General Styles */
 :root {
   --primary-text-color: #212529;
@@ -10,7 +12,7 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: "Plus Jakarta Sans", serif;
 }
 
 p {
@@ -34,14 +36,13 @@ h2 {
 
 /* Navbar Styles */
 .navbar .nav-link {
-  color: #4b5563;
   font-size: 1.25rem;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-  color: #f97316;
+  color: #f97316 !important;
 }
 
 /* Breadcrumbs */
@@ -102,6 +103,11 @@ h2 {
   background-color: white;
   box-shadow: 5px 5px green !important;
   border: 1px solid green;
+  transition: transform 0.5s ease-out;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
 }
 
 /* Gallery */
@@ -169,7 +175,7 @@ h2 {
   border: 2px solid grey;
 }
 
-.contact-section form input,
+form input,
 textarea,
 select {
   border: 2px solid grey !important;
@@ -177,13 +183,13 @@ select {
   border-radius: 10px !important;
 }
 
-.contact-section form input:focus,
+form input:focus,
 textarea:focus,
 select:focus {
   outline: none !important;
 }
 
-.contact-section form input::placeholder,
+form input::placeholder,
 textarea::placeholder {
   color: grey !important;
   font-size: 1.2rem;
@@ -208,25 +214,32 @@ textarea::placeholder {
 /* Contact page */
 .contact-card {
   transition: transform 0.3s ease;
+  box-shadow: 2px 2px 2px green;
+  border: 1px solid green;
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
 }
 
-.form-control {
+/* .form-control {
   padding: 0.75rem;
 }
 
 .form-control:focus {
   border-color: #f97316;
   box-shadow: 0 0 0 0.25rem rgba(249, 115, 22, 0.25);
-}
+} */
 
 /* Team Card */
 #team-card {
   box-shadow: 2px 2px green;
   border: 1px solid green;
+  transition: transform 0.4s ease-out;
+}
+
+#team-card:hover {
+  transform: translateY(-5px);
 }
 
 /* Counter Animation */
@@ -243,4 +256,66 @@ textarea::placeholder {
 
 .counter {
   animation: countUp 1s ease-out;
+}
+
+/* Carousel Section */
+.brand-carousel {
+  padding: 40px 0;
+}
+
+.brand-carousel h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .brand-carousel h1 {
+    font-size: 3rem;
+  }
+}
+
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.owl-carousel .item img {
+  width: 128px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.owl-carousel .item img:hover {
+  transform: scale(1.1);
+}
+
+.owl-carousel .owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+  padding: 5px 15px !important;
+  border-radius: 50% !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: -30px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: -30px;
+}
+
+.owl-carousel .owl-nav button:hover {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.owl-carousel .owl-dots {
+  margin-top: 20px;
 }
