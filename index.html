@@ -111,6 +111,22 @@
       </div>
     </nav>
 
+    <!-- Custom Modal -->
+    <div class="custom-modal" id="customModal">
+      <div class="modal-content-wrapper">
+        <button class="modal-close-btn" onclick="hideModal()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div>
+          <img
+            src="assets/Images/modal.jpeg"
+            alt="Modal Image"
+            class="modal-image"
+          />
+        </div>
+      </div>
+    </div>
+
     <!-- Main Content -->
     <main>
       <!-- Hero Section -->
@@ -1083,6 +1099,40 @@
             },
           },
         });
+      });
+
+      // Show modal after 5 seconds
+      setTimeout(() => {
+        showModal();
+      }, 5000);
+
+      function showModal() {
+        document.getElementById("customModal").classList.add("show");
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
+      }
+
+      function hideModal() {
+        document.getElementById("customModal").classList.remove("show");
+        document.body.style.overflow = ""; // Restore scrolling
+      }
+
+      // Close modal when clicking outside
+      document
+        .getElementById("customModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            hideModal();
+          }
+        });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (
+          e.key === "Escape" &&
+          document.getElementById("customModal").classList.contains("show")
+        ) {
+          hideModal();
+        }
       });
     </script>
   </body>

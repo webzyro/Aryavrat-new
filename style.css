@@ -132,13 +132,8 @@ h2 {
 }
 
 /* FAQ Accordion */
-/* .accordion-button:not(.collapsed) {
-  background-color: #f97316;
-  color: white;
-} */
-
 .accordion-button {
-  background-color: #f97316 !important;
+  background-color: grey !important;
   color: white !important;
 }
 
@@ -318,4 +313,71 @@ textarea::placeholder {
 
 .owl-carousel .owl-dots {
   margin-top: 20px;
+}
+
+/* Custom modal */
+.custom-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darker background for better focus */
+  z-index: 1050;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Show modal */
+.custom-modal.show {
+  display: flex;
+}
+
+/* Modal Content */
+.modal-content-wrapper {
+  position: relative;
+  background: white;
+  padding: 15px; /* Reduce padding */
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 90%; /* Adjust width dynamically */
+  width: auto; /* Allow content to define width */
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Close Button */
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: red;
+  cursor: pointer;
+}
+
+/* Modal Image */
+.modal-image {
+  width: auto; /* Let image define width */
+  max-width: 100%; /* Ensure it doesn’t overflow */
+  max-height: 70vh;
+  border-radius: 0.5rem;
+  object-fit: contain;
+}
+
+/* Responsive Improvements */
+@media (min-width: 768px) {
+  .modal-content-wrapper {
+    max-width: 600px; /* Reduce max width for less white space */
+    padding: 20px;
+  }
+
+  .modal-image {
+    max-width: 100%; /* Adjust width to fill modal */
+  }
 }
