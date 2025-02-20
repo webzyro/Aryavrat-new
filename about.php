@@ -19,80 +19,13 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="d-none d-md-block w-100" id="header">
-      <div class="container py-2">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-md-8">
-            <div class="d-flex flex-wrap gap-4">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-phone text-white"></i>
-                <a
-                  href="tel:+91-7633940407"
-                  class="text-white text-decoration-none"
-                  >+91-7633940407</a
-                >
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-envelope text-white"></i>
-                <a
-                  href="mailto:aryavratcd@gmail.com"
-                  class="text-white text-decoration-none"
-                  >aryavratcd@gmail.com</a
-                >
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-location-dot text-white"></i>
-                <span class="text-white">India</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 text-end">
-            <span class="text-white">Go Green With Aryavrat Energy</span>
-          </div>
-        </div>
-      </div>
-    </header>
+    <?php include header.php; ?>
 
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <img src="./assets/Images/logo.png" alt="Logo" style="width: 60px" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/gallery.html">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact.html">Contact</a>
-            </li>
-          </ul>
-          <a href="tel:+91-7633940407" class="btn btn-orange d-none d-lg-block"
-            >Free Consultancy</a
-          >
-        </div>
-      </div>
-    </nav>
+    <?php include navbar.php; ?>
+
+    <!-- Custom Modal -->
+    <?php include modal.php; ?>
 
     <!-- Breadcrumb -->
     <div class="container-fluid" id="breadcrumb">
@@ -371,129 +304,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-3">
-            <h2 class="h4 border-bottom border-warning pb-2">About</h2>
-            <p class="text-secondary">
-              Aryavrat Energy provides innovative solar solutions, focusing on
-              sustainability and cost savings. With over 200 projects, we aim to
-              reduce bills and promote eco-friendly living.
-            </p>
-          </div>
-          <div class="col-lg-3">
-            <h2 class="h4 border-bottom border-warning pb-2">Quick Links</h2>
-            <ul class="list-unstyled text-secondary">
-              <li>
-                <a href="index.html" class="text-secondary text-decoration-none"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="about.html" class="text-secondary text-decoration-none"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="text-secondary text-decoration-none"
-                  >Contact</a
-                >
-              </li>
-              <li>
-                <a
-                  href="gallery.html"
-                  class="text-secondary text-decoration-none"
-                  >Gallery</a
-                >
-              </li>
-              <li>
-                <a
-                  href="services.html"
-                  class="text-secondary text-decoration-none"
-                  >Services</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <h2 class="h4 border-bottom border-warning pb-2">Services</h2>
-            <ul class="list-unstyled text-secondary">
-              <li>Rooftop</li>
-              <li>Ground Mounted</li>
-              <li>Water Pump</li>
-              <li>Street Light</li>
-              <li>Cold Store</li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <h2 class="h4 border-bottom border-warning pb-2">Support</h2>
-            <div class="text-secondary mb-3">
-              <i class="fas fa-location-dot me-2"></i>
-              303, Madhurani Complex, Near Gyanoday Grukul School, Gola Road,
-              Danapur, Patna-801503, Bihar
-            </div>
-            <div class="text-secondary mb-3">
-              <i class="fas fa-phone me-2"></i>
-              <a
-                href="tel:+91-7633940407"
-                class="text-secondary text-decoration-none"
-                >+91-7633940407</a
-              >
-            </div>
-            <div class="text-secondary">
-              <i class="fas fa-envelope me-2"></i>
-              <a
-                href="mailto:aryavratcd@gmail.com"
-                class="text-secondary text-decoration-none"
-                >aryavratcd@gmail.com</a
-              >
-            </div>
-          </div>
-        </div>
-        <hr class="border-secondary my-4" />
-        <p class="text-center mb-0">
-          &copy; Copyright 2025 Aryavrat Energy - All Rights Reserved Made with
-          ❤️ by
-          <a
-            href="https://www.webzyro.com/"
-            target="_blank"
-            class="text-warning text-decoration-none"
-            >Webzyro</a
-          >
-          - Digital Marketing Agency
-        </p>
-      </div>
-    </footer>
+    <?php include footer.php; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      // Simple counter animation
-      const counters = document.querySelectorAll(".counter");
-      counters.forEach((counter) => {
-        const target = parseInt(counter.innerText);
-        let count = 0;
-        const duration = 2000;
-        const increment = target / (duration / 16);
-
-        const updateCount = () => {
-          count += increment;
-          if (count < target) {
-            counter.innerText =
-              Math.ceil(count) + (counter.innerText.includes("%") ? "%" : "+");
-            requestAnimationFrame(updateCount);
-          } else {
-            counter.innerText =
-              target + (counter.innerText.includes("%") ? "%" : "+");
-          }
-        };
-
-        updateCount();
-      });
-    </script>
+      
+    <script src="/index.js"></script>
+    
   </body>
 </html>

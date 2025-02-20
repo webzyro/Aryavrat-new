@@ -27,112 +27,23 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+
     <!-- Header -->
-    <header class="d-none d-md-block w-100" id="header">
-      <div class="container py-2">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-md-8">
-            <div class="d-flex flex-wrap gap-4">
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-phone text-white"></i>
-                <a
-                  href="tel:+91-7633940407"
-                  class="text-white text-decoration-none"
-                  >+91-7633940407</a
-                >
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-envelope text-white"></i>
-                <a
-                  href="mailto:aryavratcd@gmail.com"
-                  class="text-white text-decoration-none"
-                  >aryavratcd@gmail.com</a
-                >
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <i class="fas fa-location-dot text-white"></i>
-                <span class="text-white">India</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 text-end">
-            <span class="text-white fw-bold"
-              >Go Green With Aryavrat Energy</span
-            >
-          </div>
-        </div>
-      </div>
-    </header>
+  <?php include header.php; ?>
+    
 
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="/">
-          <img src="./assets/Images/logo.png" alt="Logo" style="width: 60px" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="/about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="/services.html"
-                >Services</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="/gallery.html"
-                >Gallery</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="/contact.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
-          <a href="tel:+91-7633940407" class="btn btn-orange d-none d-lg-block"
-            >Free Consultancy</a
-          >
-        </div>
-      </div>
-    </nav>
+    <?php include navbar.php; ?>
 
     <!-- Custom Modal -->
-    <div class="custom-modal" id="customModal">
-      <div class="modal-content-wrapper">
-        <button class="modal-close-btn" onclick="hideModal()">
-          <i class="fas fa-times"></i>
-        </button>
-        <div>
-          <img
-            src="assets/Images/modal.jpeg"
-            alt="Modal Image"
-            class="modal-image"
-          />
-        </div>
-      </div>
-    </div>
+    <?php include modal.php; ?>
 
     <!-- Main Content -->
     <main>
       <!-- Hero Section -->
       <section class="hero-section">
         <div class="container pt-5">
-          <h2 class="hero-title col-lg-8">
+          <h2 class="hero-title col-lg-8 fs-3 fs-1">
             Switch to energy that <br class="d-none d-lg-block" />
             doesn't harm nature
           </h2>
@@ -226,11 +137,10 @@
                 />
                 <div class="card-body text-center">
                   <h3 class="card-title h3 text-success fw-bold">
-                    Residential Solar
+                  Expert Team
                   </h3>
                   <p class="card-text text-secondary">
-                    Seamless installations within committed time frames. Timely
-                    completion is our priority for customer satisfaction.
+                  Qualified professionals ensuring top-notch installations. We bring years of expertise to every project.
                   </p>
                 </div>
               </div>
@@ -244,11 +154,10 @@
                 />
                 <div class="card-body text-center">
                   <h3 class="card-title h4 text-success fw-bold">
-                    Residential Solar
+                  Cost Efficiency
                   </h3>
                   <p class="card-text text-secondary">
-                    Seamless installations within committed time frames. Timely
-                    completion is our priority for customer satisfaction.
+                  Affordable solutions maximize your energy savings. Our approach helps reduce long-term energy costs.
                   </p>
                 </div>
               </div>
@@ -262,11 +171,10 @@
                 />
                 <div class="card-body text-center">
                   <h3 class="card-title h4 text-success fw-bold">
-                    Residential Solar
+                  High Quality
                   </h3>
                   <p class="card-text text-secondary">
-                    Seamless installations within committed time frames. Timely
-                    completion is our priority for customer satisfaction.
+                  Premium materials for reliable, durable systems. We only use the best to ensure lasting performance.
                   </p>
                 </div>
               </div>
@@ -280,11 +188,10 @@
                 />
                 <div class="card-body text-center">
                   <h3 class="card-title h4 text-success fw-bold">
-                    Residential Solar
+                  Quick Service
                   </h3>
                   <p class="card-text text-secondary">
-                    Seamless installations within committed time frames. Timely
-                    completion is our priority for customer satisfaction.
+                  Seamless installations within committed time frames. Timely completion is our priority for customer satisfaction.
                   </p>
                 </div>
               </div>
@@ -298,11 +205,10 @@
                 />
                 <div class="card-body text-center">
                   <h3 class="card-title h4 text-success fw-bold">
-                    Residential Solar
+                  Subsidy Assistance
                   </h3>
                   <p class="card-text text-secondary">
-                    Seamless installations within committed time frames. Timely
-                    completion is our priority for customer satisfaction.
+                  Guidance to avail of government solar subsidies. We simplify the process to make solar more accessible.
                   </p>
                 </div>
               </div>
@@ -316,11 +222,10 @@
                 />
                 <div class="card-body text-center">
                   <h3 class="card-title h4 text-success fw-bold">
-                    Residential Solar
+                  Eco Commitment  
                   </h3>
                   <p class="card-text text-secondary">
-                    Seamless installations within committed time frames. Timely
-                    completion is our priority for customer satisfaction.
+                  Promoting sustainability with eco-friendly energy solutions. We're dedicated to reducing your carbon footprint.
                   </p>
                 </div>
               </div>
@@ -963,102 +868,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-3">
-            <h2 class="h4 border-bottom border-warning pb-2">About</h2>
-            <p class="text-secondary">
-              Aryavrat Energy provides innovative solar solutions, focusing on
-              sustainability and cost savings. With over 200 projects, we aim to
-              reduce bills and promote eco-friendly living.
-            </p>
-          </div>
-          <div class="col-lg-3">
-            <h2 class="h4 border-bottom border-warning pb-2">Quick Links</h2>
-            <ul class="list-unstyled text-secondary">
-              <li>
-                <a href="index.html" class="text-secondary text-decoration-none"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="about.html" class="text-secondary text-decoration-none"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="text-secondary text-decoration-none"
-                  >Contact</a
-                >
-              </li>
-              <li>
-                <a
-                  href="gallery.html"
-                  class="text-secondary text-decoration-none"
-                  >Gallery</a
-                >
-              </li>
-              <li>
-                <a
-                  href="services.html"
-                  class="text-secondary text-decoration-none"
-                  >Services</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <h2 class="h4 border-bottom border-warning pb-2">Services</h2>
-            <ul class="list-unstyled text-secondary">
-              <li>Rooftop</li>
-              <li>Ground Mounted</li>
-              <li>Water Pump</li>
-              <li>Street Light</li>
-              <li>Cold Store</li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <h2 class="h4 border-bottom border-warning pb-2">Support</h2>
-            <div class="text-secondary mb-3">
-              <i class="fas fa-location-dot me-2"></i>
-              303, Madhurani Complex, Near Gyanoday Grukul School, Gola Road,
-              Danapur, Patna-801503, Bihar
-            </div>
-            <div class="text-secondary mb-3">
-              <i class="fas fa-phone me-2"></i>
-              <a
-                href="tel:+91-7633940407"
-                class="text-secondary text-decoration-none"
-                >+91-7633940407</a
-              >
-            </div>
-            <div class="text-secondary">
-              <i class="fas fa-envelope me-2"></i>
-              <a
-                href="mailto:aryavratcd@gmail.com"
-                class="text-secondary text-decoration-none"
-                >aryavratcd@gmail.com</a
-              >
-            </div>
-          </div>
-        </div>
-        <hr class="border-secondary my-4" />
-        <p class="text-center mb-0">
-          &copy; Copyright 2025 Aryavrat Energy - All Rights Reserved Made with
-          ❤️ by
-          <a
-            href="https://www.webzyro.com/"
-            target="_blank"
-            class="text-warning text-decoration-none"
-            >Webzyro</a
-          >
-          - Digital Marketing Agency
-        </p>
-      </div>
-    </footer>
+    <?php include footer.php; ?>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -1066,74 +876,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-          loop: true,
-          margin: 50,
-          autoplay: true,
-          autoplayTimeout: 2500,
-          autoplayHoverPause: true,
-          dots: true,
-          navText: ["<span>&lt;</span>", "<span>&gt;</span>"],
-          responsive: {
-            0: {
-              items: 2,
-              margin: 10,
-            },
-            640: {
-              items: 2,
-              margin: 10,
-            },
-            768: {
-              items: 3,
-              margin: 20,
-            },
-            1024: {
-              items: 4,
-              margin: 40,
-            },
-            1280: {
-              items: 4,
-              margin: 50,
-            },
-          },
-        });
-      });
-
-      // Show modal after 5 seconds
-      setTimeout(() => {
-        showModal();
-      }, 5000);
-
-      function showModal() {
-        document.getElementById("customModal").classList.add("show");
-        document.body.style.overflow = "hidden"; // Prevent background scrolling
-      }
-
-      function hideModal() {
-        document.getElementById("customModal").classList.remove("show");
-        document.body.style.overflow = ""; // Restore scrolling
-      }
-
-      // Close modal when clicking outside
-      document
-        .getElementById("customModal")
-        .addEventListener("click", function (e) {
-          if (e.target === this) {
-            hideModal();
-          }
-        });
-
-      // Close modal with Escape key
-      document.addEventListener("keydown", function (e) {
-        if (
-          e.key === "Escape" &&
-          document.getElementById("customModal").classList.contains("show")
-        ) {
-          hideModal();
-        }
-      });
-    </script>
+    <script src="/index.js"></script>
   </body>
 </html>
