@@ -32,37 +32,25 @@ $(document).ready(function () {
   });
 });
 
-// Show modal after 5 seconds
-setTimeout(() => {
-  showModal();
-}, 5000);
-
-function showModal() {
-  document.getElementById("customModal").classList.add("show");
-  document.body.style.overflow = "hidden"; // Prevent background scrolling
-}
-
-function hideModal() {
-  document.getElementById("customModal").classList.remove("show");
-  document.body.style.overflow = ""; // Restore scrolling
-}
-
-// Close modal when clicking outside
-document.getElementById("customModal").addEventListener("click", function (e) {
-  if (e.target === this) {
-    hideModal();
-  }
+// Show modal after page load
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    const appointmentModal = new bootstrap.Modal(
+      document.getElementById("appointmentModal")
+    );
+    appointmentModal.show();
+  }, 5000); // Shows after 2 seconds
 });
 
-// Close modal with Escape key
-document.addEventListener("keydown", function (e) {
-  if (
-    e.key === "Escape" &&
-    document.getElementById("customModal").classList.contains("show")
-  ) {
-    hideModal();
-  }
-});
+// // Close modal with Escape key
+// document.addEventListener("keydown", function (e) {
+//   if (
+//     e.key === "Escape" &&
+//     document.getElementById("customModal").classList.contains("show")
+//   ) {
+//     hideModal();
+//   }
+// });
 
 // Simple counter animation
 const counters = document.querySelectorAll(".counter");
