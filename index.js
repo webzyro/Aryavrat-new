@@ -57,14 +57,12 @@ $(document).ready(function () {
 });
 
 // Show modal after page load
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(function () {
-    const appointmentModal = new bootstrap.Modal(
-      document.getElementById("appointmentModal")
-    );
-    appointmentModal.show();
-  }, 5000); // Shows after 2 seconds
-});
+setTimeout(function () {
+  const appointmentModal = new bootstrap.Modal(
+    document.getElementById("appointmentModal")
+  );
+  appointmentModal.show();
+}, 5000); // Shows after 2 seconds
 
 const counters = document.querySelectorAll(".counter");
 const speed = 200;
@@ -122,7 +120,6 @@ const galleryImages = [
   { id: 4, img: "./assets/Images/gallery4.jpg" },
   { id: 5, img: "./assets/Images/gallery5.jpg" },
   { id: 6, img: "./assets/Images/gallery6.jpg" },
-  // Add more images as needed
 ];
 
 // Function to create gallery items
@@ -143,9 +140,13 @@ function createGalleryItem(image) {
 }
 
 // Populate galleries
-document.getElementById("bredaGallery").innerHTML = galleryImages
-  .map((img) => createGalleryItem(img))
-  .join("");
+// Check if element exists before setting innerHTML
+const bredaGallery = document.getElementById("bredaGallery");
+if (bredaGallery) {
+  bredaGallery.innerHTML = galleryImages
+    .map((img) => createGalleryItem(img))
+    .join("");
+}
 document.getElementById("privateGallery").innerHTML = galleryImages
   .map((img) => createGalleryItem(img))
   .join("");
