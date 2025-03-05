@@ -30,6 +30,30 @@ $(document).ready(function () {
       },
     },
   });
+  // Initialize Client Carousel
+  $(".client-carousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      576: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 4,
+      },
+    },
+  });
 });
 
 // Show modal after page load
@@ -42,37 +66,52 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 5000); // Shows after 2 seconds
 });
 
-// // Close modal with Escape key
-// document.addEventListener("keydown", function (e) {
-//   if (
-//     e.key === "Escape" &&
-//     document.getElementById("customModal").classList.contains("show")
-//   ) {
-//     hideModal();
-//   }
-// });
-
-// Simple counter animation
 const counters = document.querySelectorAll(".counter");
-counters.forEach((counter) => {
-  const target = parseInt(counter.innerText);
-  let count = 0;
-  const duration = 2000;
-  const increment = target / (duration / 16);
+const speed = 200;
 
-  const updateCount = () => {
-    count += increment;
-    if (count < target) {
-      counter.innerText =
-        Math.ceil(count) + (counter.innerText.includes("%") ? "%" : "+");
-      requestAnimationFrame(updateCount);
-    } else {
-      counter.innerText =
-        target + (counter.innerText.includes("%") ? "%" : "+");
-    }
-  };
+const startCounters = () => {
+  counters.forEach((counter) => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
 
-  updateCount();
+    const updateCount = () => {
+      const increment = target / speed;
+
+      if (count < target) {
+        count += Math.ceil(increment);
+        counter.innerText = count;
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
+};
+
+// Start counter animation when section is in view
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startCounters();
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+observer.observe(document.querySelector("#stats-section"));
+
+// Show modal after page load
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    const appointmentModal = new bootstrap.Modal(
+      document.getElementById("appointmentModal")
+    );
+    appointmentModal.show();
+  }, 5000); // Shows after 2 seconds
 });
 
 // Gallery data

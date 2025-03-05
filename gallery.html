@@ -18,25 +18,22 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <!-- Header -->
-    <?php include header.php ?>
-
     <!-- Navbar -->
-    <?php include navbar.php ?>
+    <?php include 'navbar.php'; ?>
 
     <!-- Custom Modal -->
-    <?php include modal.php; ?>
+    <?php include 'modal.php'; ?>
 
     <!-- Breadcrumb -->
     <div class="container-fluid" id="breadcrumb">
       <div
         class="container h-75 d-flex flex-column gap-4 p-4 align-items-center justify-content-center"
       >
-        <h3 class="text-light">About Us</h3>
+        <h3 class="text-light">Gallery</h3>
         <div class="d-flex align-items-center gap-3">
-          <a href="/" class="display-6 text-light fw-bold">HOME</a>
-          <i class="fa-solid fa-angles-right fw-bold text-light fs-2"></i>
-          <span class="display-6 text-light fw-bold">About</span>
+          <a href="/" class="display-6 text-light">Home</a>
+          <i class="fa-solid fa-angles-right text-light"></i>
+          <span class="display-6 text-light">Gallery</span>
         </div>
       </div>
     </div>
@@ -45,7 +42,7 @@
     <div class="container py-5">
       <!-- BREDA Section -->
       <div class="mb-5">
-        <h2 class="display-6 text-center fw-bold mb-4">
+        <h2 class="text-center mb-4">
           Bihar Renewable Energy Development Agency
         </h2>
         <div class="row g-4" id="bredaGallery">
@@ -55,7 +52,7 @@
 
       <!-- Private Projects Section -->
       <div>
-        <h2 class="display-6 text-center fw-bold mb-4">Private Projects</h2>
+        <h2 class="text-center mb-4">Private Projects</h2>
         <div class="row g-4" id="privateGallery">
           <!-- Gallery items will be dynamically added here -->
         </div>
@@ -81,7 +78,7 @@
     </div>
 
     <!-- Footer -->
-    <?php include footer.php; ?>
+    <?php include 'footer.php'; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
